@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>南阿蘇</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+   
+     $('#thumb img').click(function(){
+     console.log($(this).attr('alt'));
+     });
+     
+     const origin = $('#stage img').attr('src');
+     $('#thumb img').hover(function(){
+     const image = $(this).attr('src');
+     $('#stage img').attr('src', image);
+     }, function(){
+     $('#stage img').attr('src', origin);
+     });
+    });
+    </script>
+</head>
+
+<body>
+<li>南阿蘇</li>
+<h3>概要</h3>
+<p>熊本県北東部、阿蘇山・阿蘇カルデラの南部に位置しており、阿蘇五岳と外輪山に挟まれ、<br>
+    その大部分を山林、原野で占めています。<br> 
+    昼夜の寒暖差や年間雨量平均約2300ミリという恵まれた気候から、良質な農作物が生産されています。 </p>
+<div id="thumb">
+    <img src="images\Aso\ASO1.JPG" alt="南阿蘇1" width="100">
+    <img src="images\Aso\ASO2.JPG" alt="南阿蘇2" width="100">
+    <img src="images\Aso\ASO3.JPG" alt="南阿蘇3" width="100">
+    <img src="images\Aso\ASO4.JPG" alt="南阿蘇4" width="100">
+    <img src="images\Aso\ASO5.JPG" alt="南阿蘇5" width="100">
+    <img src="images\Aso\ASO6.JPG" alt="南阿蘇6" width="100">
+    <img src="images\Aso\ASO7.JPG" alt="南阿蘇7" width="100">
+    <img src="images\Aso\ASO8.JPG" alt="南阿蘇8" width="100">
+</div>
+<div id="stage" style="border:1px dotted #090; width: 700px; text-align: center;">
+    <br>
+<img src="images/travel.jpg" width="600">
+</div>
+<a href="https://tabelog.com/kumamoto/A4302/rank/">グルメ情報</a>
+
+</body>
+</html>
